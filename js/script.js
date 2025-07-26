@@ -6,7 +6,7 @@ const hints = ['Posso', 'te', 'dar', 'um', 'beijinho?'];
 let currentHintPhrase = ''; // Para armazenar a frase acumulada das dicas (começa vazia)
 
 // --- Variáveis para a data de aniversário ---
-const aniversario = new Date('2025-07-25T00:00:00-03:00'); // Data e hora do aniversário
+const aniversario = new Date('2025-07-27T00:00:00-03:00'); // Data e hora do aniversário
 
 // Função para carregar as dicas da sessão (usada em password.html)
 function loadHint() {
