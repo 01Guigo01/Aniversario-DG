@@ -92,3 +92,32 @@ document.addEventListener('DOMContentLoaded', () => {
         // A função selectPerson() é chamada pelos botões diretamente no HTML
     }
 });
+
+// No seu script.js, adicione esta lógica:
+
+document.addEventListener('DOMContentLoaded', () => {
+    const playButton = document.getElementById('playButton');
+    const backgroundMusic = document.getElementById('backgroundMusic');
+
+    if (playButton && backgroundMusic) {
+        playButton.addEventListener('click', () => {
+            backgroundMusic.play()
+                .then(() => {
+                    // Música começou a tocar, agora esconda o botão
+                    playButton.style.display = 'none';
+                    backgroundMusic.volume = 0.5; // Ajuste o volume, se quiser (0.0 a 1.0)
+                })
+                .catch(error => {
+                    console.log("Erro ao tentar reproduzir a música:", error);
+                    alert("Não foi possível iniciar a música automaticamente. Por favor, verifique as configurações de mídia do seu navegador.");
+                    // Se houver erro (ex: autoplay bloqueado), você pode decidir não esconder o botão
+                    // ou dar uma opção manual
+                });
+        });
+    }
+});
+
+// Mantenha o resto do seu script.js (funções de senha, etc.)
+// let attempts = 0;
+// let hintIndex = 0;
+// ...

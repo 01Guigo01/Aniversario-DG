@@ -1,52 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-3">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uma Surpresa te Espera!</title>
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Estes estilos estão aqui temporariamente para a mensagem "ainda não é a hora" */
-        /* Idealmente, eles deveriam estar no seu styles.css se forem usados em mais de uma página */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a2e; /* Cor de fundo escura, One -  Piece-like */
-            color: #e0e0e0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            text-align: center;
-            /* Use uma imagem de fundo de One Piece aqui para a tela inicial, ex: one_piece_background.jpg */
-            background-image: url('image/one_piece_background.jpg'); 
-            background-size: cover;
-            background-position: center;
-        }
-        .container {
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            max-width: 800px;
-        }
-        h1 {
-            color: orange; /* Dourado */
-            font-size: 2.8em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-        p {
-            font-size: 1.3em;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        .shanks-zoro-mention {
-            font-weight: bold;
-            color: #00bfff; /* Azul claro */
-        }
-    </style>
     <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
 </head>
 <body id="index-page">
@@ -56,7 +14,11 @@
         <p>A surpresa para você será revelada quando o Sol se pôr e o novo dia surgir no dia <span style="font-weight: bold; color: orange;">27 de Julho</span>, à meia-noite!</p>
         <p>Assim como o <span class="shanks-zoro-mention" style="color: red;">Shanks</span> aguarda o momento certo para uma grande jogada e o <span class="shanks-zoro-mention" style="color: green;">Zoro</span> foca em seu objetivo, sua surpresa está a caminho.</p>
         <p>Mantenha a calma e prepare-se para navegar nessa nova idade!</p>
+
+        <button id="playButton">Clique para Iniciar a Música</button>
     </div>
+
+    <audio id="backgroundMusic" src="audio/espera.mp3" loop></audio> 
 
     <script src="js/script.js"></script>
 </body>

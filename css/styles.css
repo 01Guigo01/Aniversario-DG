@@ -266,3 +266,21 @@ input[type="password"], input[type="text"] {
         max-width: 80%;
     }
 }
+
+/* Adicione ao seu styles.css */
+#playButton {
+    background-color: orange;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#playButton:hover {
+    background-color: #e08e00; /* Laranja um pouco mais escuro */
+    transform: translateY(-2px);
+}
