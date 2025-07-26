@@ -19,12 +19,13 @@ body {
 /* Container principal para conteúdo centralizado (aplicado em index, choose_person, birthday) */
 .container {
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 40px;
+    padding: 30px; /* Reduzindo o padding para telas menores */
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     max-width: 800px;
-    box-sizing: border-box; /* Inclui padding na largura total */
-    margin-bottom: 20px; /* Adiciona um pouco de margem na parte inferior para separar do rodapé/conteúdo abaixo */
+    width: 90%; /* Ajusta a largura para ser mais responsiva */
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 /* Estilo padrão para todas as telas (password, curious) */
@@ -33,153 +34,227 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Removido min-height: 80vh; para que o conteúdo possa se aproximar do banner */
-    padding: 20px;
+    padding: 30px; /* Reduzindo o padding para telas menores */
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.85); /* Fundo dos retângulos transparentes */
-    padding: 50px; /* Padding interno */
+    background-color: rgba(0, 0, 0, 0.85);
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
     color: #e0e0e0;
+    width: 90%; /* Ajusta a largura para ser mais responsiva */
+    max-width: 500px; /* Define uma largura máxima */
 }
 
 /* Títulos principais */
 h1 {
-    color: orange; /* Dourado */
-    font-size: 2.8em;
-    margin-bottom: 20px;
+    color: orange;
+    font-size: 2em; /* Reduzido para celular */
+    margin-bottom: 15px; /* Ajuste de margem */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 /* Parágrafos de texto */
 p {
-    font-size: 1.3em;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #e0e0e0; /* Cor padrão para parágrafos */
+    font-size: 1em; /* Reduzido para celular */
+    line-height: 1.5; /* Ajustado line-height para melhor leitura */
+    margin-bottom: 10px; /* Ajuste de margem */
+    color: #e0e0e0;
 }
 
 /* Destaques (Shanks/Zoro, nakamas, etc.) */
 .shanks-zoro-mention, .highlight {
     font-weight: bold;
-    color: #00bfff; /* Azul claro */
+    color: #00bfff;
 }
 
 /* Botões */
 button {
-    background-color: #00bfff; /* Azul claro para combinar com o destaque */
-    color: white; /* Texto branco para contraste */
+    background-color: #00bfff;
+    color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 1.1em;
+    padding: 10px 20px; /* Reduzido o padding */
+    font-size: 1em; /* Reduzido para celular */
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    margin-top: 15px;
+    margin-top: 10px; /* Ajuste de margem */
 }
 
 button:hover {
-    background-color: #009acd; /* Tom mais escuro de azul no hover */
-    transform: translateY(-2px); /* Efeito de "levantar" */
+    background-color: #009acd;
+    transform: translateY(-2px);
 }
 
 /* Inputs de senha */
 input[type="password"], input[type="text"] {
-    padding: 12px;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    border: 1px solid #00bfff; /* Borda azul clara */
+    padding: 10px; /* Reduzido o padding */
+    font-size: 1em; /* Reduzido para celular */
+    margin-bottom: 15px; /* Ajuste de margem */
+    border: 1px solid #00bfff;
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente transparente */
+    background-color: rgba(255, 255, 255, 0.9);
     color: #333;
-    width: 80%; /* Largura ajustada */
-    max-width: 300px;
-    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    width: 90%; /* Ajuste a largura para ser mais responsiva */
+    max-width: 280px; /* Define uma largura máxima */
+    box-sizing: border-box;
 }
 
 /* Dica de senha */
 #hint {
-    color: #ff4500 !important; /* Laranja avermelhado forte para dicas */
+    color: #ff4500 !important;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1em; /* Reduzido para celular */
 }
 
 /* Estilo para banners de imagem */
 #banner {
     width: 100%;
-    height: 250px; /* Altura fixa para o banner */
-    margin-bottom: 0; /* REMOVIDO OU ZERADO: Espaçamento inferior do banner */
+    height: 180px; /* Reduzindo a altura do banner para celular */
+    margin-bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Garante que a imagem não saia dos limites */
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente padrão */
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 /* Ajuste para as imagens dentro do banner */
 #banner img {
-    width: 40%; /* Cada imagem ocupa 40% da largura do banner */
-    height: auto; /* Mantém a proporção */
-    object-fit: contain; /* Ajusta a imagem dentro do contêiner sem cortar */
-    max-height: 100%; /* Garante que não exceda a altura do banner */
+    width: 60%; /* Cada imagem ocupa 60% da largura do banner no celular */
+    height: auto;
+    object-fit: contain;
+    max-height: 100%;
 }
 
 /* Estilos específicos para a página de aniversário (birthday.html) */
 #birthday-screen h1 {
-    font-size: 3.5em; /* Título maior para aniversário */
+    font-size: 2.8em; /* Título maior para aniversário, mas menor que o original */
 }
 
 #poema, #texto {
-    font-size: 1.2em; /* Tamanho maior para poemas/textos */
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 1em; /* Tamanho maior para poemas/textos, mas ajustado */
+    line-height: 1.5;
+    margin-bottom: 15px;
     text-align: center;
-    color: #e0e0e0; /* Cor do texto principal para poema/texto */
+    color: #e0e0e0;
 }
 
 .quote {
     font-style: italic;
-    margin-top: 30px;
-    font-size: 1.1em;
+    margin-top: 20px; /* Ajuste de margem */
+    font-size: 0.9em; /* Reduzido para celular */
     color: #bbb;
 }
 
 #gif-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px; /* Ajuste de margem */
+    margin-bottom: 15px;
 }
 
 #gif-container img {
-    max-width: 100%;
+    max-width: 90%; /* Permite que o GIF ocupe mais largura */
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 #footer {
-    margin-top: 50px; /* Mantém um espaçamento para o rodapé */
-    font-size: 0.8em;
+    margin-top: 20px; /* Ajuste a margem do rodapé */
+    font-size: 0.7em; /* Reduzido para celular */
     color: #777;
 }
 
 /* Estilos para o grupo de botões (usado em choose_person.html) */
 .button-group {
     display: flex;
-    gap: 20px;
+    flex-direction: column; /* Botões empilhados em telas pequenas */
+    gap: 10px; /* Espaçamento menor entre botões */
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .button-group button {
-    padding: 15px 30px;
-    font-size: 1.3em;
+    padding: 12px 25px; /* Ajuste de padding */
+    font-size: 1.1em; /* Ajuste de fonte */
+    width: 100%; /* Botões ocupam a largura total no grupo */
+    max-width: 250px; /* Largura máxima para os botões */
 }
 
 /* Ajustes para a imagem "quem.gif" em choose_person.html */
 #quem-image {
-    max-width: 80%;
+    max-width: 90%; /* Ajusta para ser mais responsiva */
     height: auto;
     display: block;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto; /* Ajuste de margem */
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* --- Media Queries para Telas Maiores (Desktops/Tablets) --- */
+/* Este bloco anulará os estilos de celular acima quando a tela for maior que 768px */
+@media (min-width: 768px) {
+    .container {
+        padding: 40px;
+    }
+    .screen {
+        padding: 50px;
+        max-width: 700px; /* Aumenta a largura máxima para telas maiores */
+    }
+    h1 {
+        font-size: 2.8em; /* Retorna ao tamanho original para desktop */
+    }
+    p {
+        font-size: 1.3em; /* Retorna ao tamanho original para desktop */
+        line-height: 1.6;
+    }
+    button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+    input[type="password"], input[type="text"] {
+        padding: 12px;
+        font-size: 1.1em;
+        width: 80%;
+        max-width: 300px;
+    }
+    #hint {
+        font-size: 1.1em;
+    }
+    #banner {
+        height: 250px; /* Retorna à altura original do banner */
+    }
+    #banner img {
+        width: 40%; /* Retorna à largura original da imagem no banner */
+    }
+    #birthday-screen h1 {
+        font-size: 3.5em; /* Título maior para aniversário */
+    }
+    #poema, #texto {
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+    .quote {
+        margin-top: 30px;
+        font-size: 1.1em;
+    }
+    #gif-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    #gif-container img {
+        max-width: 75%; /* Retorna ao tamanho original do GIF */
+    }
+    #footer {
+        margin-top: 50px;
+        font-size: 0.8em;
+    }
+    .button-group {
+        flex-direction: row; /* Botões lado a lado em telas maiores */
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .button-group button {
+        max-width: none; /* Remove a largura máxima para botões lado a lado */
+    }
+    #quem-image {
+        max-width: 80%;
+    }
 }
