@@ -1,0 +1,185 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e; /* Cor de fundo escura, One Piece-like */
+    color: #e0e0e0; /* Cor padrão do texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Imagem de fundo será definida por cada página HTML usando inline style ou mais IDs */
+}
+
+/* Container principal para conteúdo centralizado (aplicado em index, choose_person, birthday) */
+.container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    box-sizing: border-box; /* Inclui padding na largura total */
+    margin-bottom: 20px; /* Adiciona um pouco de margem na parte inferior para separar do rodapé/conteúdo abaixo */
+}
+
+/* Estilo padrão para todas as telas (password, curious) */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Removido min-height: 80vh; para que o conteúdo possa se aproximar do banner */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo dos retângulos transparentes */
+    padding: 50px; /* Padding interno */
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    color: #e0e0e0;
+}
+
+/* Títulos principais */
+h1 {
+    color: orange; /* Dourado */
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Parágrafos de texto */
+p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e0e0e0; /* Cor padrão para parágrafos */
+}
+
+/* Destaques (Shanks/Zoro, nakamas, etc.) */
+.shanks-zoro-mention, .highlight {
+    font-weight: bold;
+    color: #00bfff; /* Azul claro */
+}
+
+/* Botões */
+button {
+    background-color: #00bfff; /* Azul claro para combinar com o destaque */
+    color: white; /* Texto branco para contraste */
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #009acd; /* Tom mais escuro de azul no hover */
+    transform: translateY(-2px); /* Efeito de "levantar" */
+}
+
+/* Inputs de senha */
+input[type="password"], input[type="text"] {
+    padding: 12px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    border: 1px solid #00bfff; /* Borda azul clara */
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo levemente transparente */
+    color: #333;
+    width: 80%; /* Largura ajustada */
+    max-width: 300px;
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+
+/* Dica de senha */
+#hint {
+    color: #ff4500 !important; /* Laranja avermelhado forte para dicas */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Estilo para banners de imagem */
+#banner {
+    width: 100%;
+    height: 250px; /* Altura fixa para o banner */
+    margin-bottom: 0; /* REMOVIDO OU ZERADO: Espaçamento inferior do banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que a imagem não saia dos limites */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente padrão */
+}
+
+/* Ajuste para as imagens dentro do banner */
+#banner img {
+    width: 40%; /* Cada imagem ocupa 40% da largura do banner */
+    height: auto; /* Mantém a proporção */
+    object-fit: contain; /* Ajusta a imagem dentro do contêiner sem cortar */
+    max-height: 100%; /* Garante que não exceda a altura do banner */
+}
+
+/* Estilos específicos para a página de aniversário (birthday.html) */
+#birthday-screen h1 {
+    font-size: 3.5em; /* Título maior para aniversário */
+}
+
+#poema, #texto {
+    font-size: 1.2em; /* Tamanho maior para poemas/textos */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e0e0e0; /* Cor do texto principal para poema/texto */
+}
+
+.quote {
+    font-style: italic;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #bbb;
+}
+
+#gif-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#gif-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+#footer {
+    margin-top: 50px; /* Mantém um espaçamento para o rodapé */
+    font-size: 0.8em;
+    color: #777;
+}
+
+/* Estilos para o grupo de botões (usado em choose_person.html) */
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.button-group button {
+    padding: 15px 30px;
+    font-size: 1.3em;
+}
+
+/* Ajustes para a imagem "quem.gif" em choose_person.html */
+#quem-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem é você?</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos para esta página específica que podem não estar no styles.css genérico */
+        body {
+            background-image: url('image/question_mark_background.jpg'); /* Imagem de fundo de One Piece com interrogação */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+            max-width: 600px;
+        }
+        h1 {
+            color: orange; /* Cor do título conforme sua última indicação */
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+        }
+        /* Novo estilo para a imagem "quem.gif" */
+        #quem-image {
+            max-width: 80%; /* Garante que a imagem não seja muito grande */
+            height: auto; /* Mantém a proporção da imagem */
+            display: block; /* Garante que a imagem fique em sua própria linha */
+            margin: 0 auto 30px auto; /* Centraliza a imagem e adiciona margem inferior */
+            border-radius: 10px; /* Borda arredondada para a imagem */
+            box-shadow: 0 0 15px rgba(0,0,0,0.5); /* Sombra para a imagem */
+        }
+        .button-group {
+            display: flex;
+            gap: 20px; /* Espaçamento entre os botões */
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .button-group button {
+            padding: 15px 30px;
+            font-size: 1.3em;
+            background-color: #00bfff; /* Azul claro */
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .button-group button:hover {
+            background-color: #009acd;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body id="choose-person-page">
+    <div class="container">
+        <h1>Quem é você, aventureiro?</h1>
+        <img id="quem-image" src="image/quem.gif" alt="Personagem pensativo">
+        <div class="button-group">
+            <button onclick="selectPerson('DG')">Sou o DG</button>
+            <button onclick="selectPerson('other')">Sou outra pessoa</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

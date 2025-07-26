@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Privada</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Estilos específicos para a página de curioso */
+        body {
+            background-image: url('image/gif miku no.gif'); /* Imagem de fundo para curiosos (miku no) */
+            background-size: cover;
+            background-position: center;
+        }
+        .screen {
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+            color: #e0e0e0;
+        }
+        h1 {
+            color: #ff4500; /* Vermelho/Laranja para aviso */
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5em;
+            color: #ff6347; /* Laranja mais claro */
+        }
+        /* Novos estilos para o banner com duas imagens */
+        #banner {
+            display: flex; /* Transforma o banner em um contêiner flexível */
+            justify-content: center; /* Centraliza as imagens horizontalmente */
+            align-items: center; /* Centraliza as imagens verticalmente */
+            gap: 20px; /* Espaçamento entre as duas imagens */
+            height: 250px; /* Mantém a altura do banner */
+            overflow: hidden; /* Garante que as imagens não saiam do banner */
+            margin-bottom: 20px; /* Margem padrão para o banner */
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para o banner */
+        }
+        #banner img {
+            width: 40%; /* Cada imagem ocupa 40% da largura do banner */
+            height: auto; /* Mantém a proporção */
+            object-fit: contain; /* Ajusta a imagem dentro do contêiner sem cortar, mostrando a imagem inteira */
+            max-height: 100%; /* Garante que não exceda a altura do banner */
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <img src="image/stop.gif" alt="Acesso Negado">
+        <img src="image/nope.gif" alt="Acesso Negado">
+    </div>
+    <div id="curious-screen" class="screen">
+        <h1>Ei, curioso! Esta página é privada.</h1>
+        <p>Por favor, saia. A Grand Line não é para todos!</p>
+    </div>
+</body>
+</html>
