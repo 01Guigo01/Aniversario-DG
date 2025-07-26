@@ -2,7 +2,7 @@ let attempts = 0;
 let hintIndex = -1; // Começa com -1 para que a dica inicial seja vazia
 const maxAttempts = 6; // Este valor ainda é usado para a contagem total de tentativas antes de esgotar
 const correctPassword = '030125'; // Sua senha secreta
-const hints = ['Posso', 'te', 'dar', 'um', 'beijinho'];
+const hints = ['Posso', 'te', 'dar', 'um', 'beijinho?'];
 let currentHintPhrase = ''; // Para armazenar a frase acumulada das dicas (começa vazia)
 
 // --- Variáveis para a data de aniversário ---
